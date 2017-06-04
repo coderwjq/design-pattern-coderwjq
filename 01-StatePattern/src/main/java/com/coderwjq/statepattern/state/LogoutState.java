@@ -7,7 +7,6 @@ import android.widget.Toast;
 
 import com.coderwjq.statepattern.LoginActivity;
 import com.coderwjq.statepattern.LoginContext;
-import com.coderwjq.statepattern.MainActivity;
 
 /**
  * @Created by coderwjq on 2017/6/3 17:20.
@@ -37,20 +36,13 @@ public class LogoutState implements IUserState {
 
         Toast.makeText(context, "登陆成功", Toast.LENGTH_SHORT).show();
 
-        gotoMainActivity(context);
+        Activity activity = (Activity) context;
+        activity.finish();
     }
 
     private void gotoLoginActivity(Context context) {
         Intent intent = new Intent(context, LoginActivity.class);
-        Activity activity = (Activity) context;
-        activity.finish();
         context.startActivity(intent);
     }
 
-    private void gotoMainActivity(Context context) {
-        Intent intent = new Intent(context, MainActivity.class);
-        Activity activity = (Activity) context;
-        activity.startActivity(intent);
-        activity.finish();
-    }
 }
