@@ -43,7 +43,7 @@ public class LogoutState implements IUserState {
     private void gotoLoginActivity(Context context) {
         Intent intent = new Intent(context, LoginActivity.class);
         Activity activity = (Activity) context;
-        activity.startActivity(intent);
+        activity.finish();
         context.startActivity(intent);
     }
 
