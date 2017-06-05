@@ -33,9 +33,13 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btn_save).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mNoteCaretaker.saveMementor(createMementor());
-                Toast.makeText(MainActivity.this, "保存成功", Toast.LENGTH_SHORT).show();
-                refreshButtonState();
+                boolean result = mNoteCaretaker.saveMementor(createMementor());
+                if (result) {
+                    Toast.makeText(MainActivity.this, "保存成功", Toast.LENGTH_SHORT).show();
+                    refreshButtonState();
+                } else {
+                    Toast.makeText(MainActivity.this, "保存失败：未修改内容", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 

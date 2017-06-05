@@ -22,13 +22,29 @@ public class NoteCaretaker {
      *
      * @param mementor
      */
-    public void saveMementor(Mementor mementor) {
-        if (mMementors.size() > MAX) {
-            mMementors.remove(0);
+    public boolean saveMementor(Mementor mementor) {
+        if (mMementors.size() != 0) {
+            if (mMementors.size() <= MAX) {
+                Mementor lastMementor = mMementors.get(mMementors.size() - 1);
+                if (lastMementor.equals(mementor)) {
+                    return false;
+                } else {
+                    mMementors.add(mementor);
+                    mIndex = mMementors.size() - 1;
+                    return true;
+                }
+            } else {
+                mMementors.remove(0);
+                mMementors.add(mementor);
+                mIndex = mMementors.size() - 1;
+                return true;
+            }
+        } else {
+            mMementors.add(mementor);
+            mIndex = mMementors.size() - 1;
+            return true;
         }
 
-        mMementors.add(mementor);
-        mIndex = mMementors.size() - 1;
     }
 
     /**

@@ -24,4 +24,14 @@ public class Mementor {
     public void setCursor(int cursor) {
         this.cursor = cursor;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        Mementor mementor = (Mementor) obj;
+        if (this.text.equals(mementor.getText()) && this.cursor == mementor.getCursor()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
