@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.coderwjq.strategypattern.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:text="售价：10元/个"
+        android:textSize="24sp"/>
+
+    <EditText
+        android:id="@+id/et_buy_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入商品的购买数量"
+        android:inputType="number"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="请选择优惠策略："
+        android:textSize="16sp"/>
+
+    <RadioGroup
+        android:id="@+id/rg_discount_strategy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/rb_strategy_a"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="满200减100"/>
+
+        <RadioButton
+            android:id="@+id/rb_strategy_b"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="6折优惠"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_calculate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="计算总价"/>
+
+    <TextView
+        android:id="@+id/tv_discount_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textColor="@android:color/holo_purple"
+        android:visibility="gone"
+        android:text="折后价："
+        android:textSize="24sp"/>
+
+</LinearLayout>

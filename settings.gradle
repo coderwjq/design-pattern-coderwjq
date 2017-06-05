@@ -1,1 +1,1 @@
-include ':app', ':01-StatePattern'
+include ':app', ':01-StatePattern', ':02-StrategyPattern'
