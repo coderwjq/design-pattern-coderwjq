@@ -1,1 +1,1 @@
-include ':app', ':01-StatePattern', ':02-StrategyPattern', ':03-SimpleFactory'
+include ':app', ':01-StatePattern', ':02-StrategyPattern', ':03-SimpleFactory', ':04-MementoPattern'
