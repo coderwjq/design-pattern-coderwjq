@@ -10,6 +10,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/01-StatePattern" />
             <option value="$PROJECT_DIR$/02-StrategyPattern" />
+            <option value="$PROJECT_DIR$/03-SimpleFactory" />
             <option value="$PROJECT_DIR$/app" />
           </set>
         </option>
